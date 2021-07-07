@@ -51,11 +51,11 @@
     align-items: center;
     width: 100%;
 }
-.button{
+.btn{
     text-decoration: none;
     margin-left: 350px;
 }
-.button:hover{
+.btn:hover{
     font-weight: bold;
 }
 body{

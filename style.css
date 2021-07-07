@@ -54,6 +54,7 @@
 .btn{
     text-decoration: none;
     margin-left: 350px;
+    color: white;
 }
 .btn:hover{
     font-weight: bold;

@@ -4,8 +4,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign up page</title>
+   
     <link rel="stylesheet" href="style.css" />
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-auth.js"></script>
+
+
+<script src="index.js"></script>
+<title>Sign up page</title>
+
 </head>
 <body>
     <nav class="navbar">
@@ -42,13 +51,12 @@
             <p>Confirm Password</p>
             <input id="confirmpass" type="password" name="confirmpass" placeholder="Confirm Password" required onchange="validatePass()"><br>
 
-            <button class="button" type="submit" onclick="validatePass()">Register Account</button><br>
+            <button class="button" type="submit" onclick="signUp()">Register Account</button><br>
 
             <p style="color: black; font-weight: normal;" class="p">Already have an account? <a href="login.html">Sign in</a></p>
             
         </form>
 
     </div>
-    
 </body>
 </html>

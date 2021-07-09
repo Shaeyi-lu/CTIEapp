@@ -1,34 +1,386 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Investing</title>
     <link rel="stylesheet" href="style.css" />
+    <!--- Figure out how to do Google Font: Arvo --> 
+    
+    <style>
+        /*Body*/
+        header {padding-top: 8%; font-size: 200%; margin: 5% 20% 30% 25%}
+        body {background-color: whitesmoke; color: rgb(19, 18, 18); width:100%; height: 100%;}
+        footer, .Articles div {background: linear-gradient(180deg,rgb(0, 157, 209), rgb(63, 194, 194) 50%);}
+        a {color:rgb(19, 18, 18); transition:color .5s; text-decoration: none;}
+        a:hover{color:rgb(217, 228, 233)}
+        section {margin: 2% 1% 6% 2%; padding-top: 7%;}
+        #page-wrap {margin: auto;}
+        /*Title*/
+        .Title h1{font-family: 'Arvo', serif;}
+        .quote {font-size: 20px; text-align: center; padding: 10% 0 0 0%; position:absolute;
+            left: 5%; right: 5%;}
+        /*Articles*/
+        .Articles div {margin-left: 8%; height: 500px; width: 85%; padding: 5% 5% 5% 5%;} 
+        .Articles .contents-articles {columns:3; column-gap: 10px; list-style-type: none; 
+                                        margin: 3% 5% 3% 5%; text-align: center;}
+        .contents-articles li {padding-bottom: 40px; margin: 10px;}
+        /*Podcasts*/
+        .podcasts {columns: 3; column-gap: 10px; margin: 0 2% 0 2%; list-style-type: none;}
+        /*Videos*/
+        .videos {columns:2; column-gap: 10px; margin: 0 2% 0 2%; list-style-type: none;}
+        /*Books*/
+        .Books .content-books {margin: 0 4% 0 4%; columns: 6; list-style-type: none; 
+                                font-size: small; text-align: center;}
+        /*Courses*/
+        .courses table, th, td {border: 1px solid rgb(19, 18, 18); padding: 15px;}
+        .courses table {margin: 0% 10% 0% 10%; border-collapse: collapse;}
+        .pricing {color: goldenrod}
+        /*Sidebar Navigation*/
+        #Sidebar-Nav a {position:absolute; left: -85px; transition: 0.3s; padding: 15px; 
+                        border-radius: 0 5px 5px 0; width: 100px; font-weight: bold;}
+        #Sidebar-Nav a:hover {left: 0}
+        .sticky{position: sticky; top: 0px; position: -webkit-sticky}
+        #articles {top:90px; background-color: forestgreen}
+        #podcasts  {top:140px; background-color:blue;}
+        #videos {top:190px; background-color:red;}
+        #courses  {top:240px; background-color: rgb(86, 11, 224);}
+        #books  {top:290px; background-color:grey;}
+
+        /**Mention about the button!**/
+        .button { border:1px; text-align:center; border-radius: 1%; display: inline-block; padding: 6% 5% 5% 6%;
+            width:150%; height: 0%; margin: 0% 0 0 400%; font-size: 18px; background-color: transparent;} 
+   </style>
 </head>
 <body>
-    <nav class="navbar">
-        <div class="navbar__container">
-            <ul class="navbar__menu">
-                <li class="navbar__item">
-                    <a style="font-weight: bold" href="/" class="navbar__links">About</a>
+    <div id="page-wrap">
+
+        <nav class="navbar">
+            <div class="navbar__container">
+                <ul class="navbar__menu">
+                    <li class="navbar__item">
+                        <a style="font-weight: normal" href="Index.html" class="navbar__links">About</a>
+                    </li>
+                    <li class="navbar__item">
+                        <a style= "font-weight: normal" href="Investing.html" class="navbar__links">Investing</a>
+                    </li>
+                    <li class="navbar__item">
+                        <a style= "font-weight: normal" href="Entrepreneurship.html" class="navbar__links">Entrepreneurship</a>
+                    </li>
+                    <li class="navbar__item">
+                        <a style= "font-weight: normal" href="Taxes.html" class="navbar__links">Taxes</a>
+                    </li>
+                    <li class="navbar__btn">
+                        <button class="button">
+                            <a style= "font-weight: bold" href="Signup.html" class="btn">SIGN UP</a>
+                        </button>
+                        
+                    </li>
+                </ul>
+                
+            </div>
+        </nav>
+    
+        <!--sidebar-->
+        <nav class="sticky">
+            <div id="Sidebar-Nav">
+                <a href="#nav-articles" id="articles">Articles</a>
+                <a href="#nav-podcasts" id="podcasts">Podcasts</a>
+                <a href="#nav-videos" id="videos">Videos</a>
+                <a href="#nav-courses" id="courses">Courses</a>
+                <a href="#nav-books" id="books">Books</a>
+            </div>
+        </nav>
+    
+        <br><header class="Title">
+            <h1><strong>Investing Resources</strong></h1>
+            <blockquote class="quote">
+                <q>All intelligent investing is value investing. 
+                    Aquiring more that you are paying for. 
+                    You must value the business in order to value the stock.
+                    
+                </q>
+                <cite>- Charlier Munger</cite>
+            </blockquote>
+        </header>
+        
+
+    
+        <!-- Articles ONLY -->
+        <section class= "Articles" id="nav-articles"> 
+            <h1 aria-label="Articles"><bold> Articles </bold></h1>
+            <br>
+            <div>
+                <h4> <!--Should I add a nav tag?-->
+                    <ul class="contents-articles">
+                        <li>
+                            <a href= "https://www.investopedia.com/articles/basics/11/3-s-simple-investing.asp" target="_blank">
+                                Introduction to Investing</a>
+                        </li> 
+                        <li>
+                            <a href= "https://www.thebalance.com/stock-investing-for-the-individual-investor-3306182#the-bottom-line" target="_blank">
+                                The Pros and Cons in Investing</a>
+                        </li> 
+                        <li>
+                            <a href= "https://www.principal.com/individuals/build-your-knowledge/build-your-own-financial-plan-step-step-guide" target="_blank">
+                                Building a Financial Plan</a>
+                        </li> 
+                        <li>
+                            <a href= "https://www.bankrate.com/banking/savings/saving-and-investing-tips/" target="_blank">
+                                Saving and Investing Tips</a>
+                        </li>
+                        <li>
+                            <a href="https://www.fool.com/investing/how-to-invest/what-to-invest-in" target="_blank">
+                                What to Invest In</a>
+                        </li> 
+                        <li>
+                            <a href="https://www.fortunebuilders.com/income-generating-assets/" target="_blank">
+                                Best Income Generating Assets
+                            </a>
+                        </li> 
+                        <li>
+                            <a href="https://mint.intuit.com/blog/investing/best-investing-apps-for-beginners/" target="_blank">
+                                Investing Apps for Beginners
+                            </a>
+                        </li> 
+                        <li>
+                            <a href="https://www.nerdwallet.com/article/investing/investment-strategies" target="_blank">
+                                Investing Strageties
+                            </a>
+                        </li> 
+                        <li>
+                            <a href="https://www.thebalance.com/successful-investing-portfolio-management-357853" target="_blank">
+                                Building a Successful Investing Portfolio
+                            </a>
+                        </li> 
+                        <li>
+                            <a href="https://movement.capital/how-to-protect-a-portfolio-without-market-timing/" target="_blank">
+                                Investing Portfolio Protection Strategies
+                            </a>
+                        </li> 
+                        <li>
+                            <a href="https://www.bankrate.com/investing/stock-market-basics-for-beginners/" target="_blank">
+                                Overall Guide about the Stock Market
+                            </a>
+                        </li> 
+                        <li>
+                            <a href="https://www.sofi.com/learn/content/understanding-the-different-types-of-cryptocurrency/" target="_blank">
+                                Types of Cryptocurrency
+                            </a>
+                        </li> 
+                        <li>
+                            <a href="https://www.nerdwallet.com/article/investing/financial-advisor-vs-robo-advisor" target="_blank">
+                                Investment vs. Robo Advisors
+                            </a>
+                        </li> 
+                        <li>
+                            <a href="https://www.finra.org/investors/learn-to-invest/types-investments" target="_blank">
+                                Types of Investments
+                            </a>
+                        </li> 
+                        <li>
+                            <a href="https://www.blueshorefinancial.com/ToolsAdvice/FinancialGlossary/InvestmentGlossary/" target="_blank">
+                                Investment Terminology
+                            </a>
+                        </li> 
+                    </ul>
+                </h4>
+            </div>
+        </section>
+    
+        
+    
+        <!-- PODCASTS ONLY -->
+        <section id="nav-podcasts">
+            <h1 aria-label="Podcasts"><bold> Podcasts </bold></h1>
+            <br>
+            <ul class="podcasts">
+                    <li>
+                        <iframe src="https://open.spotify.com/embed/show/32h6GXRLbxdobcsLy5dgwP?theme=0&amp;t=0" width="100%" height="152"
+                         frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                    </li> <br><br>
+                    <li>
+                        <iframe src="https://open.spotify.com/embed/show/05GoIBt7Ka4nobVWOBsqlD?theme=0&amp;t=0" width="100%" height="152" 
+                        frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                    </li> <br><br>
+                    <li>
+                        <iframe src="https://open.spotify.com/embed/show/7tXRc97C1fA0epHAGQuJOE?theme=0&amp;t=0" width="100%" height="152"
+                        frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                    </li>  <br><br>
+                    <li>
+                        <iframe src="https://open.spotify.com/embed/show/3sIN6k0aT6cCWP2AJRvHEK?theme=0&amp;t=0" width="100%" height="152"
+                         frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                    </li> <br><br>
+                    <li>
+                        <iframe src="https://open.spotify.com/embed/show/4ZQWW3Ezl5VwhTz2dNqW5a?theme=0&amp;t=0" width="100%" height="152" 
+                        frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                    </li>  <br><br>
+                    <li>
+                        <iframe src="https://open.spotify.com/embed/show/3YaIVmKfz3MoklsP4KdexG?theme=0&amp;t=0" width="100%" height="152" 
+                        frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                    </li>
+            </ul> 
+            </ul>
+    
+        </section>
+    
+    
+    
+        <!-- VIDEOS ONLY -->
+        <section id="nav-videos">
+            <h1 aria-label="Videos"><bold> Videos </bold></h1>
+            <br>
+            <ul class="videos">
+                <li>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/gFQNPmLKj1k" title="YouTube video player" 
+                    frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </li><br><br>
+                <li>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/sWVVazhSFuE" title="YouTube video player" 
+                    frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </li>
-                <li class="navbar__item">
-                    <a href="Investing.html" class="navbar__links">Investing</a>
-                </li>
-                <li class="navbar__item">
-                    <a href="Entrepreneurship.html" class="navbar__links">Entrepreneurship</a>
-                </li>
-                <li class="navbar__item">
-                    <a href="Taxes.html" class="navbar__links">Taxes</a>
-                </li>
-                <li class="navbar__btn">
-                    <a href="Signup.html" class="btn">SIGN UP</a>
+                <li>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/A7fZp9dwELo" title="YouTube video player"
+                    frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </li><br><br>
+                <li>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/q5JWp47z4bY" title="YouTube video player"
+                    frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </li>
             </ul>
+        </section>
+    
+        <br><br>
+    
+        <!-- Courses ONLY -->
+        <section class="courses" id="nav-courses">
+            <h1 aria-label="Courses"><bold> Courses </bold></h1>
+            <br>
+            <table>
+                <tr>
+                    <th>Platform</th>
+                    <th>Course Name</th>
+                    <th>Pricing</th>
+                    <th>Short Description</th>
+                </tr>
+                <tr>
+                    <th>Udemy</th>
+                    <th><a href="https://www.udemy.com/course/learn-stock-market-from-scratch-for-absolute-beginners/?ranMID=39197&ranEAID=Q*Sg3glZ%2Ffs&ranSiteID=Q.Sg3glZ_fs-RD9jWeKTe14drGXMhzotfg&utm_source=aff-campaign&LSNPUBID=Q*Sg3glZ%2Ffs&utm_medium=udemyads" 
+                        target="_blank"> Stock Market From Scratch for Complete Beginners</a>
+                        </th>
+                    <th class="pricing">$$</th>
+                    <th>An overall Complete Beginners Guide about Investing. 
+                        This course is entirely asynchronous, with a full lifetime 
+                        access of course material and resources to use. </th>
+                </tr>
+                <tr>
+                    <th>The University of<br> Central Florida Online</th>
+                    <th><a href="https://www.ce.ucf.edu/Program/Stocks-Bonds-and-Investing-Oh-My" target="_blank">
+                        Stocks, Bonds, and Investing</th></a>
+                    <th class="pricing">$$</th>
+                    <th>For investors who aren't active traders but still want to
+                        build a strong financial future. This course covers the 
+                        fundamentals of investing in an easy to understand and 
+                        approachable manner.</th>
+                </tr>
+                <tr>
+                    <th>TD Ameritrade</th>
+                    <th><a href="https://www.tdameritrade.com/education/investment-classes.html" target="_blank">
+                        The Investing and Trading Library</a></th>
+                    <th class="pricing">$</th>
+                    <th>With an account, you can gain access to TD Ameritrade's
+                        extensive free online library of investing and trading courses.</th>
+                </tr>
+                <tr>
+                    <th>Investing 101</th>
+                    <th><a href="https://investing101.net/product/investing-course/" target="_blank">
+                        Stocket Market Investing 101 Course - Beginners</a></th>
+                    <th class="pricing">$</th>
+                    <th>This free course is made up of 10 chapters, and it starts by
+                        defining a stock, ETF, mutual funds, and more. Near the end of 
+                        the chapters, it goes into greater details of trade and how the
+                        stock market moves.</th>
+                </tr>
+                <tr>
+                    <th>Merrill Edge</th>
+                    <th><a href="https://www.merrilledge.com/morningstar-classroom-stocks" target="_blank">
+                        Investing Classroom</a></th>
+                    <th class="pricing">$</th>
+                    <th>Merrill Edge offers a large collection of textbook style modules
+                        ranging from the basic to advance. Modules include: stocks,
+                        funds, bonds, EFS, and portfolios.</th>
+                </tr>
+    
+            </table>
+        </section>
+    
+    
+        <!-- BOOKS ONLYS -->
+        <section class= "Books" id="nav-books"> 
+            <h1 aria-label="Books"><bold> Books </bold></h1>
+            <br>
+    
+                <ul class="content-books"> <!--Use scrset attribute maybe for later-->
+                <li>
+                        <a href="https://www.amazon.com/Stock-Market-Investing-Beginners-Successfully/dp/1623152577" target="_blank">
+                            <img src= " https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrPTx7XWiTrURQV0bZWfkvKtRQUXReLga-E0ejJ8c1q3VZOzjOBK9Tkgs0Bpf895lc7NaFeVU&usqp=CAc" 
+                            alt ="Book: Stock Market Investing for Beginners" width= "140" height= "215">
+                        </a> 
+                        <br><small>Stock Market Investing for Beginners by Tycho Press</small>
+                </li> <br>
+                    <li>
+                        <a href="https://www.amazon.com/dp/B07FZP4YFY?tag=aboutcom02thebalance-20&linkCode=ogi&th=1&psc=1&ascsubtag=4687249%7Cn529a8c10ebd3456099c93d46296ed18c23" target="_blank">
+                            <img src= "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOk8wKt22yAaoQF5hj4b2jft2Ab2KQarHj4h3t3WSLeLGwZNjikuUqJ4NiXgjHMhnede8TdPE&usqp=CAc" 
+                            alt ="Book: A Broke Millenial"  width= "140" height= "215">
+                        </a>
+                        <br><small>Broke Millenial Takes On Investing by<br> Erin Lowry</small>
+                    </li>
+                    <li>
+                        <a href="https://www.amazon.com/dp/0060555661?tag=aboutcom02thebalance-20&linkCode=ogi&th=1&psc=1&ascsubtag=4687249%7Cn529a8c10ebd3456099c93d46296ed18c23" target="_blank">
+                            <img src= "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQR9uhHsV2zZ0S6XMI8nyInxRpO1G-nVQ4EV8W8wiDTf7yk8ibOP3pj7ZWYgZ1sQxKB-ftyKERF&usqp=CAc" 
+                            alt ="Book: The Intelligent Investor">
+                        </a>
+                        <br><small>The Intelligent Investor by<br> Benjamin Graham</small>
+                    </li>
+                    <li>
+                        <a href="https://www.amazon.com/dp/099758470X?tag=aboutcom02thebalance-20&linkCode=ogi&th=1&psc=1&ascsubtag=4687249%7Cn529a8c10ebd3456099c93d46296ed18c23" target="_blank">
+                            <img src= "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8aNisrjptNGHx5NqKaNNxbspJHg9rKjeIL4tUU7Xe36gTXAWKoto8lQNX-tcHdk-zCoo&usqp=CAU" 
+                            alt ="Book: How to Invest in Real Estate" width= "140" height="215">
+                        </a>
+                        <br><small>How to Invest in Real Estate by<br> Brandon Turner</small>
+                    </li><br>
+                    <li>
+                        <a href="https://www.amazon.com/dp/1328479250?asc_campaign=commerce-pra&asc_refurl=https%3A%2F%2Fwww.businessinsider.com%2Fpersonal-finance%2Fbest-investing-books&asc_source=browser&tag=bi_031720_best-personal-finance-books-about-stock-market-20" target="_blank">
+                            <img src= "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGaM8iJm7bBhBeeDnk0qDcJl80fFEHKmNs-g&usqp=CAU" 
+                            alt ="Book: Mastering the Market Cycle" width= "" height= "215">
+                        </a>
+                        <br><small>Mastering the Market Cycle by<br> Howard Marks</small>
+                    </li>
+                    <li>
+                        <a href="https://www.amazon.com/dp/198761478X?tag=aboutcom02thebalance-20&linkCode=ogi&th=1&psc=1&ascsubtag=4155082%7Cn729bb21473b3402a929d72ca57d1c7a023" target="_blank">
+                            <img src= "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRe28J5JY1v5fp7kMGTWu1FEwvWXemQgnTbhQ&usqp=CAU" 
+                            alt ="Book: The Money Manual" width= "140" height= "215">
+                        </a>
+                        <br><small>The Money Manual by<br> Tonya B. Rapley</small>
+                    </li>
+                    
+    
+                    
+    
+                    
+                </ul>
             
-        </div>
-    </nav>
+        </section>
+    
+            <br><br><br>
+        
+        <footer>
+            <br><br>
+        </footer>
+
+    </div>
+    
 <body>
+
 <html>

@@ -5,7 +5,7 @@
     font-family: 'kumbh Sans', sans-serif;
 }
 .navbar{
-    background: deepskyblue;
+    background: rgb(0, 157, 209);
     height: 80px;
     display: flex;
     justify-content: center;
@@ -14,6 +14,7 @@
     position: sticky;
     top: 0;
     z-index: 999;
+    margin: 0% 0% 0% 0%;
 }
 .navbar__container{
     display: flex;
@@ -21,9 +22,9 @@
     height: 80px;
     z-index: 1;
     width: 100%;
-    max-width: 1300px;
+    max-width: 100%;
     margin: 0 auto;
-    margin-left: 485px;
+    /*margin-left: 30%;*/
     padding: 0 50px;
     font-size: 18px;
 }
@@ -32,6 +33,7 @@
     align-items: center;
     list-style: none;
     text-align: center;
+    margin: auto;
 }
 
 .navbar__links{
@@ -53,8 +55,8 @@
 }
 .btn{
     text-decoration: none;
-    margin-left: 350px;
-    color: white;
+    /*margin-left: 250px;*/
+    color: whitesmoke;
 }
 .btn:hover{
     font-weight: bold;
@@ -142,4 +144,8 @@ h3 {
     font-family: "Times New Roman";
   font-size: 35px;
 }
+
+body {animation-duration: 3s; animation-name: fadeIn;}
+        @keyframes fadeIn { 0%{opacity:0}; 100%{opacity:1;} 
+    }
 

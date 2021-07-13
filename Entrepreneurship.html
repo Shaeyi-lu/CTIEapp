@@ -1,34 +1,603 @@
-<!DOCTYPE html>
-<html lang="en">
+﻿<!DOCTYPE html>
+<html lang="en-US">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Entrepreneurship</title>
+    <title>Investing</title>
     <link rel="stylesheet" href="style.css" />
+    <!--- Figure out how to do Google Font: Arvo -->
+
+    <style>
+        /*Body*/
+        header {
+            padding-top: 8%;
+            font-size: 200%;
+            margin: 5% 20% 30% 25%
+        }
+
+        body {
+            background-color: whitesmoke;
+            color: rgb(19, 18, 18);
+            width: 100%;
+            height: 100%;
+        }
+
+        footer, .Articles div {
+            background: linear-gradient(180deg,rgb(0, 157, 209), rgb(63, 194, 194) 50%);
+        }
+
+        a {
+            color: rgb(19, 18, 18);
+            transition: color .5s;
+            text-decoration: none;
+        }
+
+            a:hover {
+                color: rgb(217, 228, 233)
+            }
+
+        section {
+            margin: 2% 1% 6% 2%;
+            padding-top: 7%;
+        }
+
+        #page-wrap {
+            margin: auto;
+        }
+        /*Title*/
+        .Title h1 {
+            font-family: 'Arvo', serif;
+        }
+
+        .quote {
+            font-size: 20px;
+            text-align: center;
+            padding: 10% 0 0 0%;
+            position: absolute;
+            left: 5%;
+            right: 5%;
+        }
+        /*Articles*/
+        .Articles div {
+            margin-left: 8%;
+            height: 500px;
+            width: 85%;
+            padding: 5% 5% 5% 5%;
+        }
+
+        .Articles .contents-articles {
+            columns: 3;
+            column-gap: 10px;
+            list-style-type: none;
+            margin: 3% 5% 3% 5%;
+            text-align: center;
+        }
+
+        .contents-articles li {
+            padding-bottom: 40px;
+            margin: 10px;
+        }
+        /*Podcasts*/
+        .podcasts {
+            columns: 3;
+            column-gap: 10px;
+            margin: 0 2% 0 2%;
+            list-style-type: none;
+        }
+        /*Videos*/
+        .videos {
+            columns: 2;
+            column-gap: 10px;
+            margin: 0 2% 0 2%;
+            list-style-type: none;
+        }
+        /*Books*/
+        .Books .content-books {
+            margin: 0 4% 0 4%;
+            columns: 6;
+            list-style-type: none;
+            font-size: small;
+            text-align: center;
+        }
+        /*Courses*/
+        .courses table, th, td {
+            border: 1px solid rgb(19, 18, 18);
+            padding: 15px;
+        }
+
+        .courses table {
+            margin: 0% 10% 0% 10%;
+            border-collapse: collapse;
+        }
+
+        .pricing {
+            color: goldenrod
+        }
+        /*Sidebar Navigation*/
+        #Sidebar-Nav a {
+            position: absolute;
+            left: -85px;
+            transition: 0.3s;
+            padding: 15px;
+            border-radius: 0 5px 5px 0;
+            width: 100px;
+            font-weight: bold;
+        }
+
+            #Sidebar-Nav a:hover {
+                left: 0
+            }
+
+        .sticky {
+            position: sticky;
+            top: 0px;
+            position: -webkit-sticky
+        }
+
+        #articles {
+            top: 90px;
+            background-color: forestgreen
+        }
+
+        #podcasts {
+            top: 140px;
+            background-color: blue;
+        }
+
+        #videos {
+            top: 190px;
+            background-color: red;
+        }
+
+        #courses {
+            top: 240px;
+            background-color: rgb(86, 11, 224);
+        }
+
+        #books {
+            top: 290px;
+            background-color: grey;
+        }
+
+        /**Mention about the button!**/
+        .button {
+            border: 1px;
+            text-align: center;
+            border-radius: 1%;
+            display: inline-block;
+            padding: 6% 5% 5% 6%;
+            width: 150%;
+            height: 0%;
+            margin: 0% 0 0 400%;
+            font-size: 18px;
+            background-color: transparent;
+        }
+    </style>
 </head>
 <body>
-    <nav class="navbar">
-        <div class="navbar__container">
-            <ul class="navbar__menu">
-                <li class="navbar__item">
-                    <a style="font-weight: bold" href="/" class="navbar__links">About</a>
+    <div id="page-wrap">
+
+        <nav class="navbar">
+            <div class="navbar__container">
+                <ul class="navbar__menu">
+                    <li class="navbar__item">
+                        <a style="font-weight: normal" href="Index.html" class="navbar__links">About</a>
+                    </li>
+                    <li class="navbar__item">
+                        <a style="font-weight: normal" href="Investing.html" class="navbar__links">Investing</a>
+                    </li>
+                    <li class="navbar__item">
+                        <a style="font-weight: normal" href="Entrepreneurship.html" class="navbar__links">Entrepreneurship</a>
+                    </li>
+                    <li class="navbar__item">
+                        <a style="font-weight: normal" href="Taxes.html" class="navbar__links">Taxes</a>
+                    </li>
+                    <li class="navbar__btn">
+                        <button class="button">
+                            <a style="font-weight: bold" href="Signup.html" class="btn">SIGN UP</a>
+                        </button>
+
+                    </li>
+                </ul>
+
+            </div>
+        </nav>
+
+        <!--sidebar-->
+        <nav class="sticky">
+            <div id="Sidebar-Nav">
+                <a href="#nav-articles" id="articles">Articles</a>
+                <a href="#nav-podcasts" id="podcasts">Podcasts</a>
+                <a href="#nav-videos" id="videos">Videos</a>
+                <a href="#nav-courses" id="courses">Courses</a>
+                <a href="#nav-books" id="books">Books</a>
+            </div>
+        </nav>
+
+        <br><header class="Title">
+            <h1><strong>Entrepreneurship Resources</strong></h1>
+            <blockquote class="quote">
+                <q>
+                    All our dreams can come true, if we have the courage to pursue them.
+                </q>
+                <cite>- Walt Disney</cite>
+            </blockquote>
+        </header>
+
+
+
+        <!-- Articles ONLY -->
+        <section class="Articles" id="nav-articles">
+            <h1 aria-label="Articles"><bold> Articles </bold></h1>
+            <br>
+            <div>
+                <h4>
+                    <!--Should I add a nav tag?-->
+                    <ul class="contents-articles">
+                        <li>
+                            <a href="https://www.inc.com/oscar-raymundo/richard-branson-young-entrepeneurs.html" target="_blank">
+                                Richard Branson to Young Entrepreneurs: ‘Just Do It’
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://ideas.ted.com/how-to-turn-small-talk-into-smart-conversation/" target="_blank">
+                                How to Turn Small Talk Into Smart Conversation
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.entrepreneur.com/article/232707" target="_blank">
+                                Think You’re Too Old to Be an Entrepreneur? Think Again. (Infographic)
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.entrepreneur.com/slideshow/299322" target="_blank">
+                                How to Become a Millionaire by Age 30
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.businessnewsdaily.com/7275-entrepreneurship-defined.html" target="_blank">
+                                Entrepreneurship Defined: What It Means to Be an Entrepreneur
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.entrepreneur.com/article/337115" target="_blank">
+                                Mark Cuban Says These are The Dumbest Things Entrepreneurs Do, Entrepreneur
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.forafinancial.com/blog/working-capital/how-do-small-business-loans-work/" target="_blank">
+                                How Do Small Business Loans Work? The Fora Financial Blog
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://hbr.org/2004/01/what-makes-a-leader" target="_blank">
+                                What Makes a Leader? Harvard Business Review
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://medium.com/@garyvee/my-advice-for-first-time-entrepreneurs-efb45e69967d" target="_blank">
+                                My Advice to First-Time Entrepreneurs, Medium.com
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://blog.producthunt.com/the-best-advice-you-ll-ever-receive-1c878599baeb" target="_blank">
+                                The Best Startup Advice You’ll Ever Receive, ProductHunt.com
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://fitsmallbusiness.com/how-to-write-a-business-proposal/" target="_blank">
+                                How to Write A Business Proposal in Six Steps, FitSmallBusiness.com
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.forafinancial.com/blog/small-business/12-small-business-startup-costs-expect/" target="_blank">
+                                12 Small Business Startup Costs You Should Expect, The Fora Financial Blog
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.forafinancial.com/blog/industries-we-serve/different-industries-can-use-working-capital/" target="_blank">
+                                How Different Industries Can Use a Small Business Loan, The Fora Financial Blog
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.hatchbuck.com/blog/improve-business-with-customer-surveys/" target="_blank">
+                                3 Ways Customer Surveys Can Improve Your Business, Hatchbuck.com
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.hatchbuck.com/blog/best-payment-processing-software-for-smbs/" target="_blank">
+                                The Best Payment Processing Software for SMBs, Hatchbuck.com
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://ducttapemarketing.com/content-keyword-research/" target="_blank">
+                                How to Do Keyword Research For Content That Generates Leads, Duct Tape Marketing
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://hbr.org/2000/09/why-should-anyone-be-led-by-you" target="_blank">
+                                Why Should Anyone Be Led by You? Harvard Business Review
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.forbes.com/sites/theyec/2019/05/02/the-psychological-price-of-entrepreneurship/" target="_blank">
+                                The Psychological Price of Entrepreneurship, Forbes.com
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.nytimes.com/guides/business/how-to-hire-the-right-person" target="_blank">
+                                How to Hire The Right Person, NYTimes.com
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.forafinancial.com/blog/working-capital/steps-can-take-business-loan-application-declined/" target="_blank">
+                                What to Do if Your Business Loan Application Was Declined, The Fora Financial Blog
+                            </a>
+                        </li>
+                    </ul>
+                </h4>
+            </div>
+        </section>
+
+
+
+        <!-- PODCASTS ONLY -->
+        <section id="nav-podcasts">
+            <h1 aria-label="Podcasts"><bold> Podcasts </bold></h1>
+            <br>
+            <ul class="podcasts">
+                <li>
+                    <iframe src="https://open.spotify.com/show/5JxcIaIkN8zx3Zy7yD9snv" width="100%" height="152"
+                            frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>
                 </li>
-                <li class="navbar__item">
-                    <a href="Investing.html" class="navbar__links">Investing</a>
+                <br>
+                <br>
+                <li>
+                    <iframe src="https://open.spotify.com/show/4MU3RFGELZxPT9XHVwTNPR" width="100%" height="152"
+                            frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>
                 </li>
-                <li class="navbar__item">
-                    <a href="Entrepreneurship.html" class="navbar__links">Entrepreneurship</a>
+                <br>
+                <br>
+                <li>
+                    <iframe src="https://open.spotify.com/show/5qSUyCrk9KR69lEiXbjwXM" width="100%" height="152"
+                            frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>
                 </li>
-                <li class="navbar__item">
-                    <a href="Taxes.html" class="navbar__links">Taxes</a>
+                <br>
+                <br>
+                <li>
+                    <iframe src="https://open.spotify.com/show/3qnXDWYMqKD3nNBiJFXyP6" width="100%" height="152"
+                            frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>
                 </li>
-                <li class="navbar__btn">
-                    <a href="Signup.html" class="btn">SIGN UP</a>
+                <br>
+                <br>
+                <li>
+                    <iframe src="https://open.spotify.com/show/25wgHxrQY2e7WNeV4UtECI" width="100%" height="152"
+                            frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                </li>
+                <br>
+                <br>
+                <li>
+                    <iframe src="https://open.spotify.com/show/47jQcyRcrM1EoV0sU39N9F" width="100%" height="152"
+                            frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                </li>
+                <br>
+                <br>
+                <li>
+                    <iframe src="https://open.spotify.com/show/1bJRgaFZHuzifad4IAApFR" width="100%" height="152"
+                            frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                </li>
+                <br>
+                <br>
+                <li>
+                    <iframe src="https://open.spotify.com/show/5CnDmMUG0S5bSSw612fs8C" width="100%" height="152"
+                            frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                </li>
+                <br>
+                <br>
+                <li>
+                    <iframe src="https://open.spotify.com/show/7wjv5MRCXWXImqTFhcufLy" width="100%" height="152"
+                            frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                </li>
+                <br>
+                <br>
+                <li>
+                    <iframe src="https://open.spotify.com/show/0IzkAfcGMug329AXjJiKZD" width="100%" height="152"
+                            frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>
                 </li>
             </ul>
-            
-        </div>
-    </nav>
-<body>
-<html>
+            </ul>
+
+        </section>
+
+
+
+        <!-- VIDEOS ONLY -->
+        <section id="nav-videos">
+            <h1 aria-label="Videos"><bold> Videos </bold></h1>
+            <br>
+            <ul class="videos">
+                <li>
+                    <iframe width="560" height="315" src="https://www.youtube.com/watch?v=Ihs4VFZWwn4" title="YouTube video player"
+                            frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </li>
+                <br>
+                <br>
+                <li>
+                    <iframe width="560" height="315" src="https://www.youtube.com/watch?v=QoqohmccTSc" title="YouTube video player"
+                            frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </li>
+                <li>
+                    <iframe width="560" height="315" src="https://www.youtube.com/watch?v=hUk7_jJlbdM" title="YouTube video player"
+                            frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </li>
+                <br>
+                <br>
+                <li>
+                    <iframe width="560" height="315" src="https://www.youtube.com/watch?v=86unGITRPLs" title="YouTube video player"
+                            frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </li>
+            </ul>
+        </section>
+
+        <br><br>
+
+        <!-- Courses ONLY -->
+        <section class="courses" id="nav-courses">
+            <h1 aria-label="Courses"><bold> Courses </bold></h1>
+            <br>
+            <table>
+                <tr>
+                    <th>Platform</th>
+                    <th>Course Name</th>
+                    <th>Pricing</th>
+                    <th>Short Description</th>
+                </tr>
+                <tr>
+                    <th>Harvard University</th>
+                    <th>
+                        <a href="https://online-learning.harvard.edu/course/entrepreneurship-essentials?delta=0"
+                           target="_blank"> Entrepreneurship Essentials</a>
+                    </th>
+                    <th class="pricing">$$$</th>
+                    <th>
+                        Make your Entrepreneurial dreams a reality by mastering 
+                        a proven framework that entrepreneurs use to build and 
+                        finance new ventures, validate concepts, and refine their 
+                        strategy in this course from Harvard Business School 
+                        (HBS) Online.
+                    </th>
+                </tr>
+                <tr>
+                    <th>Udemy</th>
+                    <th>
+                        <a href="https://www.udemy.com/course/a-beginners-guide-on-starting-a-successful-business/" target="_blank">
+                            A Beginner's Guide on Starting a Successful Business
+                        </a>
+                    </th>
+                    <th class="pricing">$</th>
+                    <th>
+                        What you'll learn:
+                        Recognize what it takes to establish and grow a company.
+                        Enhance your grasp of the processes involved in developing and validating a business idea.
+                        Acquaint yourself with several techniques for expanding your business.
+                        Determine if entrepreneurship is a good fit for you.
+                    </th>
+                </tr>
+                <tr>
+                    <th>edX</th>
+                    <th>
+                        <a href="https://www.edx.org/course/becoming-an-entrepreneur" target="_blank">
+                            Becoming an Entrepreneur
+                        </a>
+                    </th>
+                    <th class="pricing">$</th>
+                    <th>
+                        Learn the business skills and startup mindset needed to embark 
+                        on your entrepreneurial path from the premier program for 
+                        aspiring entrepreneurs, MIT Launch.
+                    </th>
+                </tr>
+                <tr>
+                    <th>Coursera</th>
+                    <th>
+                        <a href="https://www.coursera.org/learn/entrepreneurial-thinking" target="_blank">
+                            Essentials of Entrepreneurship: Thinking & Action
+                        </a>
+                    </th>
+                    <th class="pricing">$</th>
+                    <th>
+                        This interactive course provides potential entrepreneurs with the knowledge of succeeding 
+                        in an entrepreneurial opportunity.  Topics include: how creativity, opportunity and feasibility 
+                        are best evaluated; business strategies for new businesses; importance of a business plan; 
+                        achieving success in a new business.  At the end of the course students will have the skills 
+                        and confidence to evaluate starting a business, in addition to becoming more enterprising in 
+                        how they approach their roles should they decide to work in organizations.
+                    </th>
+                </tr>
+                <tr>
+                    <th>FutureLearn</th>
+                    <th>
+                        <a href="https://www.futurelearn.com/courses/innovation-enterprise" target="_blank">
+                            Unleash Your Potential: Innovation and Enterprise
+                        </a>
+                    </th>
+                    <th class="pricing">$$</th>
+                    <th>
+                        Get an introduction to innovation and enterprise, and gain the confidence to generate 
+                        ideas so that you can make a difference, with this online course from the University of Bristol.
+                        You’ll learn ways to develop ideas, gain creative confidence, and turn ideas into action.
+                        You’ll improve your problem solving capabilities, and discover problem structuring tools to tackle complex issues.
+                        Finally, you’ll learn how to develop networks, articulate ideas, and pitch successfully.
+                    </th>
+                </tr>
+
+            </table>
+        </section>
+
+
+        <!-- BOOKS ONLYS -->
+        <section class="Books" id="nav-books">
+            <h1 aria-label="Books"><bold> Books </bold></h1>
+            <br>
+
+            <ul class="content-books">
+                <!--Use scrset attribute maybe for later-->
+                <li>
+                    <a href="https://www.amazon.com/Lean-Startup-Entrepreneurs-Continuous-Innovation/dp/0670921602/ref=asc_df_0670921602/?tag=hyprod-20&linkCode=df0&hvadid=312118059795&hvpos=&hvnetw=g&hvrand=7900242605352359031&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9030068&hvtargid=pla-364195445884&psc=1" target="_blank">
+                        <img src="https://images-na.ssl-images-amazon.com/images/I/91cwOSS4sDL.jpg"
+                             alt="Book: The Lean Startup" width="140" height="215">
+                    </a>
+                    <br><small>The Lean Startup by<br> Eric Ries</small>
+                </li>
+                <br>
+                <li>
+                    <a href="https://www.amazon.com/Zero-One-Notes-Startups-Future/dp/0804139296/ref=asc_df_0804139296/?tag=hyprod-20&linkCode=df0&hvadid=312118059795&hvpos=&hvnetw=g&hvrand=1282586289782265986&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9030068&hvtargid=pla-432168417267&psc=1" target="_blank">
+                        <img src="https://images-na.ssl-images-amazon.com/images/I/71Xygne8+qL.jpg"
+                             alt="Book: Zero to One" width="140" height="215">
+                    </a>
+                    <br><small>Zero to One by<br> Peter Thiel and Blake Masters</small>
+                </li>
+                <li>
+                    <a href="https://www.amazon.com/How-Win-Friends-Influence-People/dp/0671027034" target="_blank">
+                        <img src="https://images-na.ssl-images-amazon.com/images/I/51X7dEUFgoL._AC_SY780_.jpg"
+                             alt="Book: How To Win Friends and Influence People">
+                    </a>
+                    <br><small>How To Win Friends and Influence People by<br> Dale Carnegie</small>
+                </li>
+                <li>
+                    <a href="https://www.amazon.com/Habits-Highly-Effective-People-Powerful/dp/0743269519" target="_blank">
+                        <img src="https://images-na.ssl-images-amazon.com/images/I/51hV5vGr4AL._SX326_BO1,204,203,200_.jpg"
+                             alt="Book: The 7 Habits of Highly Effective People" width="140" height="215">
+                    </a>
+                    <br><small>The 7 Habits of Highly Effective People by<br> Stephen Covey</small>
+                </li>
+                <li>
+                    <a href="https://www.amazon.com/Awaken-Giant-Within-Immediate-Emotional/dp/0671791540/ref=asc_df_0671791540/?tag=hyprod-20&linkCode=df0&hvadid=312006100296&hvpos=&hvnetw=g&hvrand=3001219741242049677&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9030068&hvtargid=pla-625533918712&psc=1" target="_blank">
+                        <img src="https://images-na.ssl-images-amazon.com/images/I/81KkKgd18LL.jpg"
+                             alt="Book: Awaken the Giant Within" width="140" height="215">
+                    </a>
+                    <br><small>Awaken the Giant Within by<br> Tony Robbins</small>
+                </li>
+                <li>
+                    <a href="https://www.amazon.com/Tribe-Mentors-TIM-FERRISS/dp/1785041851/ref=asc_df_1785041851/?tag=hyprod-20&linkCode=df0&hvadid=312710253827&hvpos=&hvnetw=g&hvrand=15612709896631875077&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9030068&hvtargid=pla-381024460713&psc=1&tag=&ref=&adgrpid=61681020945&hvpone=&hvptwo=&hvadid=312710253827&hvpos=&hvnetw=g&hvrand=15612709896631875077&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9030068&hvtargid=pla-381024460713" target="_blank">
+                        <img src="https://images-na.ssl-images-amazon.com/images/I/71gFZnfHXIL.jpg"
+                             alt="Book: Tribe of Mentors" width="140" height="215">
+                    </a>
+                    <br><small>Tribe of Mentors by<br> Tim Ferriss</small>
+                </li>
+            </ul>
+
+        </section>
+
+        <br><br><br>
+
+        <footer>
+            <br><br>
+        </footer>
+
+    </div>
+
+    </body>
+
+        </html>

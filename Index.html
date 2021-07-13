@@ -6,13 +6,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Index</title>
     <link rel="stylesheet" href="style.css" />
+
+    <style>
+        .button {
+            border: 1px;
+            text-align: center;
+            border-radius: 1%;
+            display: inline-block;
+            padding: 6% 5% 5% 6%;
+            width: 150%;
+            height: 0%;
+            margin: 0% 0 0 400%;
+            font-size: 18px;
+            background-color: transparent;
+        }
+
+
+@media (max-width: 599px) {
+            #Sidebar-Nav {display: none;}
+            img {width: 100%; height: auto;}
+            table {resize: both;}
+            body {font-size: 11px;}
+            .navbar__links, .btn {font-size: smaller; padding: 0 auto;}
+            .button {display: none;} /**Figure out how to fix the sign up**/
+        }
+    </style>
 </head>
 <body>
     <nav class="navbar">
         <div class="navbar__container">
             <ul class="navbar__menu">
                 <li class="navbar__item">
-                    <a style="font-weight: bold" href="/" class="navbar__links">About</a>
+                    <a href="Index.html" class="navbar__links">About</a>
                 </li>
                 <li class="navbar__item">
                     <a href="Investing.html" class="navbar__links">Investing</a>
@@ -24,7 +49,9 @@
                     <a href="Taxes.html" class="navbar__links">Taxes</a>
                 </li>
                 <li class="navbar__btn">
-                    <a href="Signup.html" class="btn">SIGN UP</a>
+                    <button class="button">
+                        <a style= "font-weight: bold" href="Signup.html" class="btn">SIGN UP</a>
+                    </button>
                 </li>
             </ul>
             

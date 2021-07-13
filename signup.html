@@ -51,7 +51,7 @@
             <p>Confirm Password</p>
             <input id="confirmpass" type="password" name="confirmpass" placeholder="Confirm Password" required onchange="validatePass()"><br>
 
-            <button class="button" type="submit" onclick="signUp()">Register Account</button><br>
+            <button class="button" type="submit" onsubmit="signUp()" onclick="validatePass()">Register Account</button><br>
 
             <p style="color: black; font-weight: normal;" class="p">Already have an account? <a href="login.html">Sign in</a></p>
             

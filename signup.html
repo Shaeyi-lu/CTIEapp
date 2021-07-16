@@ -4,15 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   
+
     <link rel="stylesheet" href="style.css" />
 
     <!-- The core Firebase JS SDK is always required and must be listed first -->
-<script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-auth.js"></script>
+<!-- <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-app.js"></script> -->
+<!-- <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-auth.js"></script> -->
 
 
-<script src="index.js"></script>
+<!-- <script src="index.js"></script> -->
 <title>Sign up page</title>
 
 </head>
@@ -32,31 +32,59 @@
                 <li class="navbar__item">
                     <a href="/" class="navbar__links">Taxes</a>
                 </li>
-                
+
             </ul>
-            
+
         </div>
     </nav>
 
     <div class="signup">
         <h1>Sign Up</h1>
-        <form action="login.php" method="post">
+        <form id='signUp-form'>
 
             <p>Email Address</p>
             <input id = "email" type="email" name="email" placeholder="Enter email address" required>
 
             <p>Password</p>
-            <input id="pass" type="password" name="pass" placeholder="Enter Password" required onchange="validatePass()"><br>
+            <input id="pass" type="password" name="pass" placeholder="Enter Password" required ><br>
 
             <p>Confirm Password</p>
-            <input id="confirmpass" type="password" name="confirmpass" placeholder="Confirm Password" required onchange="validatePass()"><br>
+            <input id="confirmpass" type="password" name="confirmpass" placeholder="Confirm Password" required><br>
 
-            <button class="button" type="submit" onsubmit="signUp()" onclick="validatePass()">Register Account</button><br>
+            <button class="button" type="submit">Register Account</button><br>
 
             <p style="color: black; font-weight: normal;" class="p">Already have an account? <a href="login.html">Sign in</a></p>
-            
+
         </form>
 
     </div>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-auth.js"></script>
+<script src="firebaseInit.js"></script>
+<script src="auth.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-analytics.js"></script>
+
+<!-- <script>
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  var firebaseConfig = {
+    apiKey: "AIzaSyC_pM4BxQen_-SPZnRcx4jEm8QmkeS2Yvo",
+    authDomain: "login-example-1.firebaseapp.com",
+    projectId: "login-example-1",
+    storageBucket: "login-example-1.appspot.com",
+    messagingSenderId: "870204567504",
+    appId: "1:870204567504:web:e3f4e717b30f3fe22653d5",
+    measurementId: "G-8TWL299GC7"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+  firebase.auth();
+
+  -->
 </body>
 </html>

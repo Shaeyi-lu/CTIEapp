@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar__container">
+
+        </div>
+    </nav>
+
+    <div class="signup">
+        <h1>Login</h1>
+        <form id="login-form">
+
+            <p>Email Address</p>
+            <input id = "email" type="email" name="email" placeholder="Enter email address" required>
+
+            <p>Password</p>
+            <input id="pass" type="password" name="pass" placeholder="Enter Password"><br>
+
+            <button class="button" type="submit">Login</button><br>
+
+            <p class="p">Need to make an account? <a href="signup.html">Sign up</a></p>
+
+        </form>
+
+    </div>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-analytics.js"></script>
+
+<script src="firebaseInit.js"></script>
+<script src="auth.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+</body>
+</html>

@@ -201,3 +201,41 @@ a:hover{ color:rgb(217, 228, 233); }
                 font-weight: bold;}
 
 #Sidebar-Nav a:hover {left: 0}
+
+.forum{
+    
+    background-color: rgb(195, 232, 247);
+    margin-top: 40px;
+    margin-left: 22%;
+    width: 900px;
+    height: 300px;
+   
+}
+
+textarea{
+    width: 80%;
+    margin-top: 10%;
+    margin-left: 10%;
+    border-color: blue;
+    border-width: 4px;
+}
+
+.forum input[type="submit"]{
+    border-radius: 50%;
+    width:100px;
+    margin-left: 80%;
+    margin-top: 20px;
+    color: #fff;
+    background-color: blue;
+    font-size: 30px;
+    border: none;
+    outline: none;
+   
+}
+.title{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+    margin-top: 40px;
+
+}

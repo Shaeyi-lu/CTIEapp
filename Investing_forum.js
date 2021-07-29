@@ -36,6 +36,7 @@ function renderPost(doc) {
 
   username.textContent = doc.data().username;
   text.textContent = doc.data().blog;
+  responseText.placeholder = "Respond to this post";
   postRes.textContent = "Respond";
 
   for (let i = 0; i < doc.data().resList.length; i++) {
@@ -68,9 +69,9 @@ function renderPost(doc) {
     let id = e.target.parentElement.getAttribute('data-id');
     var user = firebase.auth().currentUser;
     e.preventDefault();
-    if (responseText.value == null) {
+    if (responseText.value == null || responseText.value === "") {
       alert("Response can't be empty");
-    }
+    } else {
     var user = firebase.auth().currentUser;
     if (user != null) {
       db.collection('investingRes').add({
@@ -89,6 +90,7 @@ function renderPost(doc) {
     } else {
       alert("Please sign in");
     }
+  }
   });
 }
 

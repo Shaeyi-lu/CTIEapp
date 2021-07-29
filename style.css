@@ -212,7 +212,7 @@ a:hover{ color:rgb(217, 228, 233); }
 
 .forum{
     
-    background-color: rgb(195, 232, 247);
+   
     margin-top: 40px;
     margin-left: 22%;
     width: 900px;
@@ -222,10 +222,12 @@ a:hover{ color:rgb(217, 228, 233); }
 
 textarea{
     width: 80%;
+    height: 80px;
     margin-top: 10%;
     margin-left: 10%;
-    border-color: blue;
+   
     border-width: 4px;
+   
 }
 
 .forum input[type="submit"]{
@@ -301,13 +303,15 @@ table{
   
   .content li {
     padding: 10px;
-    background: #f6f6f6;
+    background: white;
     color: black;
     /* position: relative; */
     border: 0.5px solid #e6e6e6;
-    border-radius: 5px;
+    border-radius: 15px;
     margin-bottom: 0.5rem;
     margin-top: 0.5rem;
+    width: 1000px;
+    margin-left: 300px;
   }
   
   .content li span:nth-child(1){
@@ -319,4 +323,26 @@ table{
   .content li span{
     display: block;
   }
+
+  .forum ::placeholder{
+    
+      font-size: 30px;
+      margin-left: 15px;
+      padding-left: 20px;
+      padding-top: 10px;
+  }
   
+  .button_1{
+      border-radius: 50%;
+      border: none;
+      outline: none;
+      width: 100px;
+      height: 50px;
+      margin-top: 20px;
+      background: rgb(0, 157, 209);
+      color: white;
+      font-size: 25px;
+      margin-left: 720px;
+      
+
+  }

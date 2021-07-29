@@ -40,7 +40,6 @@ function renderPost(doc) {
 // display posts
 db.collection('postings').get().then(snapshot => {
   snapshot.forEach(doc => {
-    console.log(doc.id, " => ", doc.data());
     renderPost(doc);
   })
 });

@@ -82,7 +82,7 @@ body{
     box-sizing: border-box;
     padding: 70px 30px;
 }
-.signup input[type="email"], input[type="password"]{
+.signup input[type="email"], input[type="password"], input[type="text"]{
     width: 100%;
     height: 60px;
     padding: 12px 20px;
@@ -292,3 +292,31 @@ table{
     font-size: 17px;
     margin-top: 40px;
 }
+
+.content ul {
+    list-style-type: none;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  
+  .content li {
+    padding: 10px;
+    background: #f6f6f6;
+    color: black;
+    /* position: relative; */
+    border: 0.5px solid #e6e6e6;
+    border-radius: 5px;
+    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
+  }
+  
+  .content li span:nth-child(1){
+    text-align: right;
+  }
+  
+ 
+  
+  .content li span{
+    display: block;
+  }
+  

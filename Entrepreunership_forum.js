@@ -28,7 +28,7 @@ function renderPost(doc) {
   let li = document.createElement('li');
   let username = document.createElement('span');
   let text = document.createElement('span');
-  let responses = document.createElement('span');
+  let responses = document.createElement('div');
   let responseText = document.createElement('textarea');
   let postRes = document.createElement('button');
 

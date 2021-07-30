@@ -314,20 +314,69 @@ table{
     border-radius: 15px;
     margin-bottom: 0.5rem;
     margin-top: 0.5rem;
-    width: 1000px;
-    margin-left: 300px;
+  
+    
+   
+  }
+  .content{
+
+    padding: 100px;
+   
+    
   }
   
   .content li span:nth-child(1){
     text-align: right;
+   
+    padding-left: 0px;
+    padding-right: 0px;
+
+    
+   
   }
   
+  .content li span:nth-child(2){
+   
+ 
+    padding-left: 0px;
+    padding-right: 0px;
+   
+  }
+
+  
+  .content li span:nth-child(3){
+   
+    
+    padding-left: 100px;
+    padding-right: 100px;
+   
+  }
+  
+  .content button{
+    border-radius: 50%;
+      border: none;
+      outline: none;
+      width: 125px;
+      height: 50px;
+      margin-top: 20px;
+      background: rgb(0, 157, 209);
+      color: white;
+      font-size: 25px;
+      margin-left: 1025px;
+   
+  }
+
  
   
   .content li span{
     display: block;
+    
+  
   }
 
+  .content div{
+      color:rgb(0, 157, 209);
+  }
   .forum ::placeholder{
     
       font-size: 30px;

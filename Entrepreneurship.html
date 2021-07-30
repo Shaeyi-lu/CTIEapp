@@ -49,13 +49,20 @@
             padding-top: 7%;
         }
 
+        section h1{ 
+                font-size: 180%;
+                margin-left: 20px; 
+                font-weight: 700;
+            }
+
         #page-wrap {
             margin: auto;
         }
         /*Title*/
-        .Title h1 {
+        .Title_1 h1 {
             font-family: 'Arvo', serif;
             text-align: center;
+            font-size: 150%;
         }
 
         .quote {
@@ -86,6 +93,12 @@
             padding-bottom: 40px;
             margin: 10px;
         }
+
+        .contents-articles li a:hover{ color:rgb(217, 228, 233);
+            list-style-type: none;
+            text-decoration: none;}
+
+        .contents-articles li a {color: black; font-weight: 500; font-size: 60%;}
         /*Podcasts*/
         .podcasts {
             columns: 3;
@@ -165,7 +178,7 @@
             padding: 6% 5% 5% 6%;
             width: 150%;
             height: 0%;
-            margin: 0% 0 0 400%;
+            margin: 0% 0 0 200%;
             font-size: 18px;
             background-color: transparent;
         }
@@ -179,6 +192,14 @@
                 .navbar__links, .btn {font-size: smaller; padding: 0 auto;}
                 .button {display: none;} /**Figure out how to fix the sign up**/
             }
+
+        a { color:rgb(19, 18, 18);
+            transition:color .5s;
+        }
+        
+        a:hover{ color:rgb(217, 228, 233);
+            list-style-type: none;
+            text-decoration: none;}
     </style>
 </head>
 <body>
@@ -224,7 +245,7 @@
             </div>
         </nav>
 
-        <br><header class="Title">
+        <br><header class="Title_1">
             <h1><strong>Entrepreneurship Resources</strong></h1>
             <blockquote class="quote">
                 <q>
@@ -455,7 +476,7 @@
         <section class="courses" id="nav-courses">
             <h1 aria-label="Courses"><bold> Courses </bold></h1>
             <br>
-            <table>
+            <table class=table_1>
                 <tr>
                     <th>Platform</th>
                     <th>Course Name</th>

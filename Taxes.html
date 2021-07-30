@@ -19,30 +19,38 @@
     /*body*/
     header {padding-top: 8%; font-size: 200%; margin: 5% 20% 1% 25%; text-align: center;}
     section {margin: 10% 1% 15% 2%; padding-top: 7%;}
-    body {font-family: Georgia, 'Times New Roman', Times, serif;}
+    body {background-color: whitesmoke; color: rgb(19, 18, 18); width:100%; height: 100%;}
+    /*title*/
+    .Title_1 h1{ text-align: centered; font-weight:700; font-size: 200%;}
+    section h1 {margin-left: 20px; font-weight: 700;}
     /*nav-bar*/
     .button { border:1px; text-align:center; border-radius: 1%; padding: 6% 5% 5% 6%;
-            width:150%; height: 0%; margin: 0% 0% 0% 400%; background-color: transparent;}
+            width:150%; height: 0%; margin: 0% 0% 0% 200%; background-color: transparent;} 
+    .button a {color: whitesmoke;}
     /*Google Map*/
     .tax-map {display: block; margin: 0 auto; width: 100%; height: 100%}
     .tax-map iframe {display: block; margin-left: auto; margin-right: auto;}
-    .tax-map h5 {margin-left: 25%; margin-bottom: 2%; font-size: 120%;}
+    .tax-map h5 {margin-left: 10%; margin-right: 30%; margin-bottom: 2%; font-size: 120%;}
     /*Articles*/
     footer, .Articles div, .back {background: linear-gradient(180deg,rgb(0, 157, 209), rgb(63, 194, 194) 50%);}
     .Articles div {margin-left: 8%; height: 0%; width: 85%; padding: 5% 5% 5% 5%;} 
-    .content-taxes {columns:3; column-gap: 5%; list-style-type: none; margin: 3% 5% 3% 5%; text-align: center;}
+    .content-taxes {columns:3; column-gap: 5%; list-style-type: none; margin: 3% 5% 3% 5%; text-align: center; color:whitesmoke;}
     .content-taxes li {padding-bottom: 12%; margin: 10px;}
+    .content-taxes li a {color: black; font-weight: 500; font-size: 70%;}
+    .content-taxes li a:hover{ color:rgb(217, 228, 233);
+            list-style-type: none;
+            text-decoration: none;}
     /*tool tip*/
-    .tooltip {position: relative; display: inline-block; margin: 5%; font-weight: 500;}
-    .tooltip .text {visibility: hidden; width: 200%; background-color: teal; color: whitesmoke;
+    .tooltip_1 {position: relative; display: inline-block; margin: 5%; font-weight: 500; font-size: 70%;}
+    .tooltip_1 .text_1 {visibility: hidden; width: 200%; background-color: teal; color: whitesmoke;
                     text-align: center; border-radius: 6px; padding: 5px 0;
                 
                     position: absolute; z-index: 1; top: 200%; left: 50%; margin-left: -100%;}
-    .tooltip:hover .text {visibility: visible;}
-    .text {font-size: 70%; font-weight: 500;}
+    .tooltip_1:hover .text_1 {visibility: visible;}
+    .text_1 {font-size: 70%; font-weight: 500;}
     /*SideNav Bar*/
     #Sidebar-Nav a:hover {left: 0}
-    .sticky{position: sticky; top: 0px; position: -webkit-sticky}
+    .sticky{position: sticky; top: 0px; position: -webkit-sticky;}
     #art {top:90px; background-color: forestgreen}
     #map  {top:140px; background-color:blue;}
     #site {top:190px; background-color:red;}
@@ -60,6 +68,10 @@
     .back {color: black; transform: rotateY(180deg);
          font-size:100%; text-align: center;}
     .back-list li {padding-bottom: 1%; margin: 10px; list-style-type: none;}
+    .back a {color: black;}
+    .back a:hover{ color:rgb(217, 228, 233);
+            list-style-type: none;
+            text-decoration: none;}
     /*resizing page*/
     @media (max-width: 1200px) {
             #Sidebar-Nav {display: none;}
@@ -72,16 +84,6 @@
         }
 
     @media screen and (min-width: 1400px){
-        body {
-            font-size: 200%;
-        }
-        #Sidebar-Nav {
-            font-size: 80%;
-        }
-        img {
-            width: 100%;
-            height: 100%;
-        }
         .back {
             height: 100%;
             font-size: 80%;
@@ -91,387 +93,397 @@
         }
         .cell {
             height: 100%;
-            font-size: 80%;
+            font-size: 150%;
         }
-}
+
+    a { color:rgb(19, 18, 18);
+    transition:color .5s;
     
-    </style>
+    }
+        
+    a:hover{ color:rgb(217, 228, 233);
+            list-style-type: none;
+            text-decoration: none;}
+}
+</style>
 </head>
 <body>
-    <nav class="navbar">
-        <div class="navbar__container">
-            <ul class="navbar__menu">
-                <li class="navbar__item">
-                    <a href="Index.html" class="navbar__links">About</a>
-                </li>
-                <li class="navbar__item">
-                    <a href="Investing.html" class="navbar__links">Investing</a>
-                </li>
-                <li class="navbar__item">
-                    <a href="Entrepreneurship.html" class="navbar__links">Entrepreneurship</a>
-                </li>
-                <li class="navbar__item">
-                    <a href="Taxes.html" class="navbar__links">Taxes</a>
-                </li>
-                <li class="navbar__item">
-                    <a href="Forum.html" class="navbar__links">Forum</a>
-                </li>
-                <li class="navbar__btn">
-                    <button class="button">
-                        <a style= "font-weight: bold" href="Signup.html" class="btn">SIGN UP</a>
-                    </button>
-                </li>
-            </ul>
-            
-        </div>
-    </nav>
-
-    <!--Sidebar-->
-    <nav class="sticky">
-        <div id="Sidebar-Nav">
-            <a href="#nav-art" id="art">Articles</a>
-            <a href="#nav-map" id="map">Map</a>
-            <a href="#nav-site" id="site">Websites</a>
-        </div>
-    </nav>
-
-    <br><!--Title-->
-    <header class="Title">
-        <h1>Taxes</h1>
-        <h6 class="tooltip">
-            Tax Day is on <time datetime="2022-15-04">April 15, 2022</time>
-            <span class="text">
-                Tax Day is the day on which individual income tax returns
-                are due to be submitted to the federal government.
-            </span>
-        </h6>
-    </header>
-
-    <br>
-    <!--Articles ONLY-->
-    <section class="Articles" id="nav-art">
-        <h2>Articles</h2>
-        <br>
-        <div>
-            <h4>
-                <ul class="content-taxes">
-                    <li>
-                        <a href="https://www.usa.gov/file-taxes" target="_blank">
-                            Paying Taxes</a>
+    <div id="page-wrap">
+        <nav class="navbar">
+            <div class="navbar__container">
+                <ul class="navbar__menu">
+                    <li class="navbar__item">
+                        <a href="Index.html" class="navbar__links">About</a>
                     </li>
-                    <li>
-                        <a href="https://www.investopedia.com/taxes-4427724" target="_blank">
-                            Taxes: The Basics</a>
+                    <li class="navbar__item">
+                        <a href="Investing.html" class="navbar__links">Investing</a>
                     </li>
-                    <li>
-                        <a href="https://money.usnews.com/money/personal-finance/taxes/articles/tax-filing-tips-for-college-students" target="_blank">
-                            Tax Filing Tips</a>
+                    <li class="navbar__item">
+                        <a href="Entrepreneurship.html" class="navbar__links">Entrepreneurship</a>
                     </li>
-                    <li>
-                        <a href="https://apps.irs.gov/app/freeFile/browse-all-offers" target="_blank">
-                            Free Tax Filing Programs</a>
+                    <li class="navbar__item">
+                        <a href="Taxes.html" class="navbar__links">Taxes</a>
                     </li>
-                    <li>
-                        <a href="https://www.claconnect.com/services/tax/federal-tax-strategies-credits-and-incentives" target="_blank">
-                            Federal Tax Strageties</a>
+                    <li class="navbar__item">
+                        <a href="Forum.html" class="navbar__links">Forum</a>
                     </li>
-                    <li>
-                        <a href="https://www.policygenius.com/taxes/types-of-taxes/" target="_blank">
-                            Types of Taxes</a>
+                    <li class="navbar__btn">
+                        <button class="button">
+                            <a style= "font-weight: bold" href="Signup.html" class="btn">SIGN UP</a>
+                        </button>
                     </li>
-                    <li>
-                        <a href="https://taxfoundation.org/tax-policy-101" target="_blank">
-                            Tax Policy 101</a>
-                    </li>
-                    <li>
-                        <a href="https://blog.taxact.com/top-irs-tax-forms/" target="_blank">
-                            IRS Tax Forms</a>
-                    </li>
-                    <li>
-                        <a href="https://www.nasfaa.org/tax_transcript_decoder" target="_blank">
-                            Tax Transcript Decoder</a>
-                    </li>
-                    <li>
-                        <a href="https://www.investopedia.com/ask/answers/060515/what-difference-between-state-income-tax-and-federal-income-tax.asp" target="_blank">
-                            Federal vs. State Income Tax</a>
-                    </li>
-                    <li>
-                        <a href="https://www.irs.gov/" target="_blank">
-                            Internal Revenue Service (IRS)</a>
-                    </li>
-                    <li>
-                        <a href="https://www.1040.com/tax-guide/for-students-and-new-grads/" target="_blank">
-                            Tax Guide: For Students and New Grads</a>
-                    </li>
-                    <li>
-                        <a href="https://www.efile.com/tax-return/timeline/" target="_blank">
-                            Tax Return Deadlines</a>
-                    </li>
-                    <li>
-                        <a href="https://www.irs.gov/credits-deductions/individuals/aotc" target="_blank">
-                            American Opportuniy Tax Credit</a>
-                    </li>
-                    <li>
-                        <a href="https://www.irs.gov/credits-deductions/individuals/llc" target="_blank">
-                            Lifetime Learning Credit</a>
-                    </li>
-                    <li>
-                        <a href="https://www.efile.com/glossary/" target="_blank">
-                            Tax Terminology</a>
-                    </li>
-
                 </ul>
-            </h4>
-        </div>
-
-
-    </section>
+                
+            </div>
+        </nav>
     
-    <!--Tax Map-->
-    <section class= "tax-map" id="nav-map">
-        <h5>Tax Preparation Companies Near You</h5>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d25822.56454372726!2d-115.13837953649278!3d36.00025060967213!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1stax%20preparation%20companies%20near%20me!5e0!3m2!1sen!2sus!4v1625975858962!5m2!1sen!2sus" 
-                 width="800" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-        <br>
-    </section>
-
-    <!--Websites ONLY-->
-    <section class="Websites" id="nav-site">
-        <h1>Websites</h1>
-        <br>
+        <!--Sidebar-->
+        <nav class="sticky">
+            <div id="Sidebar-Nav">
+                <a href="#nav-art" id="art">Articles</a>
+                <a href="#nav-map" id="map">Map</a>
+                <a href="#nav-site" id="site">Websites</a>
+            </div>
+        </nav>
     
-        <div class="grid">
-            <div class="cell">
-
-                <div class="flip-card">
-                    <div class="inner">
-                        <div class="front">
-                            <picture>
-                                <img src="https://blog.turbotax.intuit.com/wp-content/uploads/2019/05/TT_Blog-Header.png?resize=1200,646"
-                                height="360" width="605" alt="Turbo Tax" >
-                            </picture>
-                        </div>
-                        <div class="back">
-                            <a href="https://turbotax.intuit.com/" target="_blank">
-                                <h2>Turbo Tax</h2><br>
-                                <p>TurboTax uses a Interview-style Q&A experience to help
-                                    the user file their taxes in a easy to understand system.
-                                    They offer a wide rande of functionality and tools that
-                                    makes entering information easy. Furthermore, help is easy
-                                    to access, and explanations are clear and authorative.<br>
-                                    <ul class="back-list">
-                                        <li>
-                                            Pricing: free-$90 for federal; 40$ per state; free-
-                                            $170 for TurboTax Live; additional $45-60 for Max
-                                        </li>
-                                        <li class="hide">
-                                            Additional info: user-friendly; live, on-screen support
-                                            options offers human help at extra cost; more expensive
-                                            compared to other competitors.
-                                        </li>
-                                    </ul>
-                                </p>
-                            </a>
+        <br><!--Title-->
+        <header class="Title_1">
+            <h1>Taxes</h1>
+            <h6 class="tooltip_1">
+                Tax Day is on <time datetime="2022-15-04">April 15, 2022</time>
+                <span class="text_1">
+                    Tax Day is the day on which individual income tax returns
+                    are due to be submitted to the federal government.
+                </span>
+            </h6>
+        </header>
+    
+        <br>
+        <!--Articles ONLY-->
+        <section class="Articles" id="nav-art">
+            <h2>Articles</h2>
+            <br>
+            <div>
+                <h4>
+                    <ul class="content-taxes">
+                        <li>
+                            <a href="https://www.usa.gov/file-taxes" target="_blank">
+                                Paying Taxes</a>
+                        </li>
+                        <li>
+                            <a href="https://www.investopedia.com/taxes-4427724" target="_blank">
+                                Taxes: The Basics</a>
+                        </li>
+                        <li>
+                            <a href="https://money.usnews.com/money/personal-finance/taxes/articles/tax-filing-tips-for-college-students" target="_blank">
+                                Tax Filing Tips</a>
+                        </li>
+                        <li>
+                            <a href="https://apps.irs.gov/app/freeFile/browse-all-offers" target="_blank">
+                                Free Tax Filing Programs</a>
+                        </li>
+                        <li>
+                            <a href="https://www.claconnect.com/services/tax/federal-tax-strategies-credits-and-incentives" target="_blank">
+                                Federal Tax Strageties</a>
+                        </li>
+                        <li>
+                            <a href="https://www.policygenius.com/taxes/types-of-taxes/" target="_blank">
+                                Types of Taxes</a>
+                        </li>
+                        <li>
+                            <a href="https://taxfoundation.org/tax-policy-101" target="_blank">
+                                Tax Policy 101</a>
+                        </li>
+                        <li>
+                            <a href="https://blog.taxact.com/top-irs-tax-forms/" target="_blank">
+                                IRS Tax Forms</a>
+                        </li>
+                        <li>
+                            <a href="https://www.nasfaa.org/tax_transcript_decoder" target="_blank">
+                                Tax Transcript Decoder</a>
+                        </li>
+                        <li>
+                            <a href="https://www.investopedia.com/ask/answers/060515/what-difference-between-state-income-tax-and-federal-income-tax.asp" target="_blank">
+                                Federal vs. State Income Tax</a>
+                        </li>
+                        <li>
+                            <a href="https://www.irs.gov/" target="_blank">
+                                Internal Revenue Service (IRS)</a>
+                        </li>
+                        <li>
+                            <a href="https://www.1040.com/tax-guide/for-students-and-new-grads/" target="_blank">
+                                Tax Guide: For Students and New Grads</a>
+                        </li>
+                        <li>
+                            <a href="https://www.efile.com/tax-return/timeline/" target="_blank">
+                                Tax Return Deadlines</a>
+                        </li>
+                        <li>
+                            <a href="https://www.irs.gov/credits-deductions/individuals/aotc" target="_blank">
+                                American Opportuniy Tax Credit</a>
+                        </li>
+                        <li>
+                            <a href="https://www.irs.gov/credits-deductions/individuals/llc" target="_blank">
+                                Lifetime Learning Credit</a>
+                        </li>
+                        <li>
+                            <a href="https://www.efile.com/glossary/" target="_blank">
+                                Tax Terminology</a>
+                        </li>
+    
+                    </ul>
+                </h4>
+            </div>
+    
+    
+        </section>
+        
+        <!--Tax Map-->
+        <section class= "tax-map" id="nav-map">
+            <h5>Tax Preparation Companies Near You</h5>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d25822.56454372726!2d-115.13837953649278!3d36.00025060967213!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1stax%20preparation%20companies%20near%20me!5e0!3m2!1sen!2sus!4v1625975858962!5m2!1sen!2sus" 
+                     width="800" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            <br>
+        </section>
+    
+        <!--Websites ONLY-->
+        <section class="Websites" id="nav-site">
+            <h1>Websites</h1>
+            <br>
+        
+            <div class="grid">
+                <div class="cell">
+    
+                    <div class="flip-card">
+                        <div class="inner">
+                            <div class="front">
+                                <picture>
+                                    <img src="https://blog.turbotax.intuit.com/wp-content/uploads/2019/05/TT_Blog-Header.png?resize=1200,646"
+                                    height="360" width="605" alt="Turbo Tax" >
+                                </picture>
+                            </div>
+                            <div class="back">
+                                <a href="https://turbotax.intuit.com/" target="_blank">
+                                    <h2>Turbo Tax</h2><br>
+                                    <p>TurboTax uses a Interview-style Q&A experience to help
+                                        the user file their taxes in a easy to understand system.
+                                        They offer a wide rande of functionality and tools that
+                                        makes entering information easy. Furthermore, help is easy
+                                        to access, and explanations are clear and authorative.<br>
+                                        <ul class="back-list">
+                                            <li>
+                                                Pricing: free-$90 for federal; 40$ per state; free-
+                                                $170 for TurboTax Live; additional $45-60 for Max
+                                            </li>
+                                            <li class="hide">
+                                                Additional info: user-friendly; live, on-screen support
+                                                options offers human help at extra cost; more expensive
+                                                compared to other competitors.
+                                            </li>
+                                        </ul>
+                                    </p>
+                                </a>
+                            </div>
                         </div>
                     </div>
+    
                 </div>
-
-            </div>
-
-            <div class="cell">
-
-                <div class="flip-card">
-                    <div class="inner">
-                        <div class="front">
-                            <picture>
-                                <img src="https://i.pcmag.com/imagery/reviews/05AHL6UHaEd40jYln8t3GIb-5.1569472880.fit_scale.size_760x427.jpg"
-                                    height="360" width="605" alt="H&R Block">
-                            </picture>
-                        </div>
-                        <div class="back">
-                            <a href="https://www.hrblock.com/" target="_blank">
-                                <h2>H&R Block</h2><br>
-                                <p>H&R Block is a comprehensive, easy-to-use tax service that
-                                    helps e-filers claim relevant income, deductions, and credits.
-                                    It's an excellent choice for simple and comples returns,
-                                    both in terms of its user experience and help options.<br>
-                                    <ul class="back-list">
-                                        <li>
-                                            Pricing: free-$85 for federal; $37 per state; $40-145 for Online Assist
-                                        </li>
-                                        <li class="hide">
-                                            Additional info: straightforward and easy to use; free
-                                            version is an option for more people compared to other
-                                            competitors; access to tax pros on demand at an added cost.
-                                        </li>
-                                    </ul>
-                                </p>
-                            </a>
+    
+                <div class="cell">
+    
+                    <div class="flip-card">
+                        <div class="inner">
+                            <div class="front">
+                                <picture>
+                                    <img src="https://i.pcmag.com/imagery/reviews/05AHL6UHaEd40jYln8t3GIb-5.1569472880.fit_scale.size_760x427.jpg"
+                                        height="360" width="605" alt="H&R Block">
+                                </picture>
+                            </div>
+                            <div class="back">
+                                <a href="https://www.hrblock.com/" target="_blank">
+                                    <h2>H&R Block</h2><br>
+                                    <p>H&R Block is a comprehensive, easy-to-use tax service that
+                                        helps e-filers claim relevant income, deductions, and credits.
+                                        It's an excellent choice for simple and comples returns,
+                                        both in terms of its user experience and help options.<br>
+                                        <ul class="back-list">
+                                            <li>
+                                                Pricing: free-$85 for federal; $37 per state; $40-145 for Online Assist
+                                            </li>
+                                            <li class="hide">
+                                                Additional info: straightforward and easy to use; free
+                                                version is an option for more people compared to other
+                                                competitors; access to tax pros on demand at an added cost.
+                                            </li>
+                                        </ul>
+                                    </p>
+                                </a>
+                            </div>
                         </div>
                     </div>
+    
                 </div>
-
-            </div>
-            <div class="cell">
-
-                <div class="flip-card">
-                    <div class="inner">
-                        <div class="front">
-                            <picture>
-                                <img src="https://cdn.mos.cms.futurecdn.net/HXjvvemnzUQRa2RLtWeHJb.jpg" 
-                                        height="360" width="605" alit="Jackson Hewitt Online">
-                            </picture>
-                        </div>
-                        <div class="back">
-                            <a href="https://www.jacksonhewitt.com/" target="_blank">
-                                <h2>Jackson Hewitt Online</h2><br>
-                                <p>In addition to a dead-simple interface, a comprehensive library of
-                                    tax articles, and built-in calculators, Jackson Hewitt Online
-                                    offers the best refunding insurance. The service features free IRS audit
-                                    assistance, a Worry-Free Guarentee plan, along with a Worry-Free Guarantee
-                                    Platinum tier plan which inclues Audit Security support from a dedicated 
-                                    support specialist to manage and represent your case.<br>
-                                    <ul class="back-list">
-                                        <li>
-                                            Pricing: $25 for federal; $49 per state; $135 for W2 forms;
-                                            $300 for 1099 forms; etc..
-                                        </li>
-                                        <li class="hide">
-                                            Additional info: unlimited email and live chat support; easy-to-navigate
-                                            interface; can be more expensive than other competitors;
-                                            fewer features than other services.
-                                        </li>
-                                    </ul>
-                                </p>
-                            </a>
+                <div class="cell">
+    
+                    <div class="flip-card">
+                        <div class="inner">
+                            <div class="front">
+                                <picture>
+                                    <img src="https://cdn.mos.cms.futurecdn.net/HXjvvemnzUQRa2RLtWeHJb.jpg" 
+                                            height="360" width="605" alit="Jackson Hewitt Online">
+                                </picture>
+                            </div>
+                            <div class="back">
+                                <a href="https://www.jacksonhewitt.com/" target="_blank">
+                                    <h2>Jackson Hewitt Online</h2><br>
+                                    <p>In addition to a dead-simple interface, a comprehensive library of
+                                        tax articles, and built-in calculators, Jackson Hewitt Online
+                                        offers the best refunding insurance. The service features free IRS audit
+                                        assistance, a Worry-Free Guarentee plan, along with a Worry-Free Guarantee
+                                        Platinum tier plan which inclues Audit Security support from a dedicated 
+                                        support specialist to manage and represent your case.<br>
+                                        <ul class="back-list">
+                                            <li>
+                                                Pricing: $25 for federal; $49 per state; $135 for W2 forms;
+                                                $300 for 1099 forms; etc..
+                                            </li>
+                                            <li class="hide">
+                                                Additional info: unlimited email and live chat support; easy-to-navigate
+                                                interface; can be more expensive than other competitors;
+                                                fewer features than other services.
+                                            </li>
+                                        </ul>
+                                    </p>
+                                </a>
+                            </div>
                         </div>
                     </div>
+    
                 </div>
-
-            </div>
-            <div class="cell">
-                <div class="flip-card">
-                    <div class="inner">
-                        <div class="front">
-                            <picture>
-                                <img src="https://www.cnet.com/a/img/pVt_W68Oz239OPrMrJP2j91Yvn4=/420x236/2021/02/05/8aa2db54-6149-4654-993b-43174b475e0e/taxslayer-logo-centered.jpg" 
-                                        height="360" width="605" alt="Tax Slayer">
-                            </picture>
-                        </div>
-                        <div class="back">
-                            <a href="https://www.taxslayer.com/" target="_blank">
-                                <h2>Tax Slayer</h2><br>
-                                <p>TaxSlayer is an affordable tax preparation service and provides
-                                    all the tax forms you'll need. That noted, the free version comes 
-                                    with some degree of payment to access personalized tax advice.
-                                    TaxSlayer Premium provides comprehensive assistance from a tax
-                                    professional, including live phone and chat support, 
-                                    as well as audit protection.<br>
-                                    <ul class="back-list">
-                                        <li>
-                                            Pricing: free-$47 for federal; $39 per state
-                                        </li>
-                                        <li class="hide">
-                                            Additional info: TaxSlayer offers a no-interest advance on
-                                            your tax refund (after the IRS accepted your filing); could
-                                            save a lot of money if you're a confident tax filer.
-                                        </li>
-                                    </ul>
-                                </p>
-                            </a>
+                <div class="cell">
+                    <div class="flip-card">
+                        <div class="inner">
+                            <div class="front">
+                                <picture>
+                                    <img src="https://www.cnet.com/a/img/pVt_W68Oz239OPrMrJP2j91Yvn4=/420x236/2021/02/05/8aa2db54-6149-4654-993b-43174b475e0e/taxslayer-logo-centered.jpg" 
+                                            height="360" width="605" alt="Tax Slayer">
+                                </picture>
+                            </div>
+                            <div class="back">
+                                <a href="https://www.taxslayer.com/" target="_blank">
+                                    <h2>Tax Slayer</h2><br>
+                                    <p>TaxSlayer is an affordable tax preparation service and provides
+                                        all the tax forms you'll need. That noted, the free version comes 
+                                        with some degree of payment to access personalized tax advice.
+                                        TaxSlayer Premium provides comprehensive assistance from a tax
+                                        professional, including live phone and chat support, 
+                                        as well as audit protection.<br>
+                                        <ul class="back-list">
+                                            <li>
+                                                Pricing: free-$47 for federal; $39 per state
+                                            </li>
+                                            <li class="hide">
+                                                Additional info: TaxSlayer offers a no-interest advance on
+                                                your tax refund (after the IRS accepted your filing); could
+                                                save a lot of money if you're a confident tax filer.
+                                            </li>
+                                        </ul>
+                                    </p>
+                                </a>
+                            </div>
                         </div>
                     </div>
+    
                 </div>
-
-            </div>
-
-            
-            <div class="cell">
-                <div class="flip-card">
-                    <div class="inner">
-                        <div class="front">
-                            <picture>
-                                <img src="https://www.cnet.com/a/img/uu-5_cA_FwZZ_jwPXtKmI6uGb9s=/756x425/2019/12/19/d9081c0c-6b0c-4390-8303-7cba256bf4f3/screen-shot-2019-12-19-at-11-28-37-am.png" 
-                                        height="360" width="605" alt="Tax Act">
-                            </picture>
-                        </div>
-                        <div class="back">
-                            <a href="https://www.taxact.com/" target="_blank">
-                                <h2>Tax Act</h2><br>
-                                <p>TaxAct is less well-known among other tax software providers, but 
-                                    it offers quality online software that general cost far less. It's 
-                                    strengths lie on its simplicity, navigation options, and the ability
-                                    to browse through the knowledge database as you input your
-                                    itemized deductions.<br>
-                                    <ul class="back-list">
-                                        <li>
-                                            Pricing: free-$65 for federal; $5-45 per state filing; extra
-                                            cost for Tax Specialist support
-                                        </li>
-                                        <li class="hide">
-                                            Additional info: Prices are set based on level of support rather 
-                                            than level of functionality; cheaper than other competitors; 
-                                            fewer real-time support options - especially face-to-face ones.
-                                        </li>
-                                    </ul>
-                                </p>
-                            </a>
+    
+                
+                <div class="cell">
+                    <div class="flip-card">
+                        <div class="inner">
+                            <div class="front">
+                                <picture>
+                                    <img src="https://www.cnet.com/a/img/uu-5_cA_FwZZ_jwPXtKmI6uGb9s=/756x425/2019/12/19/d9081c0c-6b0c-4390-8303-7cba256bf4f3/screen-shot-2019-12-19-at-11-28-37-am.png" 
+                                            height="360" width="605" alt="Tax Act">
+                                </picture>
+                            </div>
+                            <div class="back">
+                                <a href="https://www.taxact.com/" target="_blank">
+                                    <h2>Tax Act</h2><br>
+                                    <p>TaxAct is less well-known among other tax software providers, but 
+                                        it offers quality online software that general cost far less. It's 
+                                        strengths lie on its simplicity, navigation options, and the ability
+                                        to browse through the knowledge database as you input your
+                                        itemized deductions.<br>
+                                        <ul class="back-list">
+                                            <li>
+                                                Pricing: free-$65 for federal; $5-45 per state filing; extra
+                                                cost for Tax Specialist support
+                                            </li>
+                                            <li class="hide">
+                                                Additional info: Prices are set based on level of support rather 
+                                                than level of functionality; cheaper than other competitors; 
+                                                fewer real-time support options - especially face-to-face ones.
+                                            </li>
+                                        </ul>
+                                    </p>
+                                </a>
+                            </div>
                         </div>
                     </div>
+    
+    
+    
+    
+    
                 </div>
-
-
-
-
-
-            </div>
-            <div class="cell">
-
-                <div class="flip-card">
-                    <div class="inner">
-                        <div class="front">
-                            <picture>
-                                <img src="https://d1nzzttg89jj6.cloudfront.net/assets/articles/1618563279/credit-karma-partners-with-bud-on-open-banking.png" 
-                                        height="360" width="605" alt="Credit Karma"> 
-                            </picture>
-                        </div>
-                        <div class="back">
-                            <a href="https://www.creditkarma.com/tax" target="_blank">
-                                <h2>Credit Karma</h2><br>
-                                <p>Credit Karma Tax is a completely free along with a user-friendly
-                                    interface that provides a helpful guidance about any tax related 
-                                    terminology. It supports most IRS forms and schedules for federal
-                                    and state returns, even the Schedule C.<br>
-                                    <ul class="back-list">
-                                        <li>
-                                            Pricing: $0 for feredal and state, 100% free
-                                        </li>
-                                        <li class="hide">
-                                            Additional info: software limitations like: unable to file
-                                            taxes without filing your federal taxes first, doesn't support 
-                                            multiple state filing, part-year state filing or non-resident.
-                                        </li>
-                                    </ul>
-                                </p>
-                            </a>
+                <div class="cell">
+    
+                    <div class="flip-card">
+                        <div class="inner">
+                            <div class="front">
+                                <picture>
+                                    <img src="https://d1nzzttg89jj6.cloudfront.net/assets/articles/1618563279/credit-karma-partners-with-bud-on-open-banking.png" 
+                                            height="360" width="605" alt="Credit Karma"> 
+                                </picture>
+                            </div>
+                            <div class="back">
+                                <a href="https://www.creditkarma.com/tax" target="_blank">
+                                    <h2>Credit Karma</h2><br>
+                                    <p>Credit Karma Tax is a completely free along with a user-friendly
+                                        interface that provides a helpful guidance about any tax related 
+                                        terminology. It supports most IRS forms and schedules for federal
+                                        and state returns, even the Schedule C.<br>
+                                        <ul class="back-list">
+                                            <li>
+                                                Pricing: $0 for feredal and state, 100% free
+                                            </li>
+                                            <li class="hide">
+                                                Additional info: software limitations like: unable to file
+                                                taxes without filing your federal taxes first, doesn't support 
+                                                multiple state filing, part-year state filing or non-resident.
+                                            </li>
+                                        </ul>
+                                    </p>
+                                </a>
+                            </div>
                         </div>
                     </div>
+    
                 </div>
-
             </div>
-        </div>
-
-    </section>
-
-
-
-
-
-    <br><br><br>
-
-    <footer>
-        <br><br>
-    </footer>
-
+    
+        </section>
+    
+    
+    
+    
+    
+        <br><br><br>
+    
+        <footer>
+            <br><br>
+        </footer>
+    
+    </div>
 <body>
 <html>
